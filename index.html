@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Méridien Aménagement & Ingénierie — Démonstrations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#081B33; --navy-800:#0F2D52; --navy-600:#1B4570;
+  --gold-500:#C9A227; --gold-300:#E0C468;
+  --paper:#F6F3EC; --ink:#1B2430; --slate:#5C6B7A; --line:#D9D3C4;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;min-height:100vh;
+  background:linear-gradient(180deg,var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-800) 100%);
+  color:#EDEFF2;font-family:'Inter',sans-serif;
+  display:flex;flex-direction:column;
+}
+h1,h2{font-family:'Fraunces',serif;font-weight:600;margin:0;letter-spacing:-0.01em;}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px;width:100%;}
+
+header{padding:40px 0 0 0;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.brand-text b{font-family:'Fraunces',serif;font-size:16px;color:#fff;letter-spacing:0.02em;}
+.brand-text span{font-size:10px;letter-spacing:0.14em;color:var(--gold-300);text-transform:uppercase;}
+
+main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px 0;}
+.eyebrow{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-300);margin-bottom:14px;font-weight:600;}
+main h1{font-size:clamp(28px,4.2vw,44px);color:#fff;max-width:640px;}
+main p.lead{color:#B9C4D2;max-width:560px;margin-top:16px;font-size:15.5px;}
+
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px;}
+@media(max-width:720px){.demo-grid{grid-template-columns:1fr;}}
+.demo-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:8px;
+  padding:26px;text-decoration:none;color:inherit;display:block;
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.demo-card:hover{
+  transform:translateY(-3px);border-color:var(--gold-500);background:rgba(255,255,255,0.07);
+}
+.demo-tag{font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-300);font-weight:600;margin-bottom:10px;}
+.demo-card h2{font-size:19px;color:#fff;margin-bottom:10px;}
+.demo-card p{font-size:13px;color:#B9C4D2;margin:0 0 18px 0;line-height:1.5;}
+.demo-card .cta{font-size:12.5px;color:var(--gold-300);font-weight:600;}
+.demo-card .cta::after{content:" →";}
+
+footer{padding:24px 0 32px 0;border-top:1px solid rgba(255,255,255,0.1);}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+footer .slogan{font-family:'Fraunces',serif;color:var(--gold-300);font-size:13.5px;}
+footer small{font-size:11px;color:#7C8DA3;}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 60 60">
+      <circle cx="30" cy="26" r="18" fill="none" stroke="#E0C468" stroke-width="2"/>
+      <ellipse cx="30" cy="26" rx="18" ry="7" fill="none" stroke="#E0C468" stroke-width="1.4"/>
+      <ellipse cx="30" cy="26" rx="7" ry="18" fill="none" stroke="#E0C468" stroke-width="1.4"/>
+      <line x1="12" y1="26" x2="48" y2="26" stroke="#E0C468" stroke-width="1.4"/>
+      <line x1="30" y1="8" x2="30" y2="44" stroke="#E0C468" stroke-width="1.4"/>
+      <line x1="30" y1="8" x2="30" y2="2" stroke="#C9A227" stroke-width="2.5"/>
+      <circle cx="30" cy="2" r="2.4" fill="#C9A227"/>
+      <rect x="10" y="46" width="5" height="8" fill="#E0C468"/>
+      <rect x="17" y="42" width="5" height="12" fill="#E0C468"/>
+      <rect x="24" y="38" width="5" height="16" fill="#E0C468"/>
+      <rect x="31" y="34" width="5" height="20" fill="#C9A227"/>
+    </svg>
+    <div class="brand-text">
+      <b>MÉRIDIEN</b>
+      <span>Aménagement &amp; Ingénierie</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="eyebrow">Démonstrations interactives</div>
+  <h1>Deux projets, deux démos, une seule vision</h1>
+  <p class="lead">Des maquettes interactives conçues pour appuyer les propositions de Méridien auprès du gouvernement guinéen — cliquez sur un projet pour l'explorer.</p>
+
+  <div class="demo-grid">
+    <a class="demo-card" href="peage-8-novembre-demo.html">
+      <div class="demo-tag">Échangeur Pont 8 Novembre</div>
+      <h2>Système de péage urbain</h2>
+      <p>Simulateur de flux de trafic, tableau de bord de supervision, schéma d'implantation et coupe technique du portique.</p>
+      <div class="cta">Explorer la démo</div>
+    </a>
+    <a class="demo-card" href="adressage-kaloum-demo.html">
+      <div class="demo-tag">Commune de Kaloum</div>
+      <h2>Adressage urbain</h2>
+      <p>Carte interactive : cliquez sur un bâtiment pour découvrir l'adresse qui lui serait attribuée, rue par rue.</p>
+      <div class="cta">Explorer la démo</div>
+    </a>
+  </div>
+</main>
+
+<footer class="wrap">
+  <div class="foot-row">
+    <div class="slogan">Bâtir les repères de demain</div>
+    <small>Méridien Aménagement &amp; Ingénierie</small>
+  </div>
+</footer>
+
+</body>
+</html>
