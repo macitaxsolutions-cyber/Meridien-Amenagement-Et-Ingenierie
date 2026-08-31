@@ -48,7 +48,7 @@ nav{border-bottom:1px solid var(--line);background:#fff;}
 .doc-row:first-of-type{border-top:none;}
 .doc-row .name{font-size:13.5px;font-weight:600;color:var(--navy-800);}
 .doc-row .sub{font-size:11.5px;color:var(--slate);}
-.doc-note{font-size:12px;color:var(--slate);margin-top:14px;}.pdf-embed{margin-top:10px;border:1px solid var(--line);border-radius:6px;overflow:hidden;}.pdf-embed iframe{width:100%;height:480px;border:none;display:block;}
+.doc-note{font-size:12px;color:var(--slate);margin-top:14px;}.pdf-embed{margin-top:10px;border:1px solid var(--line);border-radius:6px;overflow:hidden;}.pdf-embed iframe{width:100%;height:640px;border:none;display:block;}.pdf-expand{display:block;text-align:right;font-size:11.5px;color:var(--navy-600);font-weight:600;margin-top:6px;cursor:pointer;}.pdf-expand:hover{color:var(--gold-500);}
 
 .demo-section{margin:44px 0 60px 0;}
 .demo-head{margin-bottom:18px;}
@@ -139,13 +139,13 @@ footer small{font-size:11px;color:#7C8DA3;}
   <div class="tag">Documents</div>
   <div class="doc-row">
   <div>
-  <div class="name">Note technique et stratégique</div><div class="pdf-embed"><iframe src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/assainissement/Note_Assainissement_Eaux_Usees_Conakry.pdf#toolbar=0&navpanes=0" title="Note technique"></iframe></div>
+  <div class="name">Note technique et stratégique</div><div class="pdf-embed"><iframe id="pdf-ass-1" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/assainissement/Note_Assainissement_Eaux_Usees_Conakry.pdf#toolbar=0&navpanes=0" title="Note technique"></iframe><a class="pdf-expand" onclick="pdfFullscreen('pdf-ass-1')">⤤ Agrandir</a></div>
 <div class="sub">Diagnostic, vision, approche technique, phasage, montage</div>
 </div>
 </div>
 <div class="doc-row">
   <div>
-  <div class="name">Modèle de chiffrage</div><div class="pdf-embed"><iframe src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/assainissement/Modele_Chiffrage_Assainissement_Conakry.pdf#toolbar=0&navpanes=0" title="Modèle de chiffrage"></iframe></div>
+  <div class="name">Modèle de chiffrage</div><div class="pdf-embed"><iframe id="pdf-ass-2" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/assainissement/Modele_Chiffrage_Assainissement_Conakry.pdf#toolbar=0&navpanes=0" title="Modèle de chiffrage"></iframe><a class="pdf-expand" onclick="pdfFullscreen('pdf-ass-2')">⤤ Agrandir</a></div>
 <div class="sub">Hypothèses modifiables, données par zone, phasage et coûts</div>
 </div>
 </div>
@@ -186,5 +186,5 @@ footer small{font-size:11px;color:#7C8DA3;}
 </div>
 </footer>
 
-</body>
+<script>function pdfFullscreen(id){var el=document.getElementById(id);if(el.requestFullscreen){el.requestFullscreen();}else if(el.webkitRequestFullscreen){el.webkitRequestFullscreen();}}</script></body>
 </html>
