@@ -129,13 +129,13 @@ footer small{font-size:11px;color:#7C8DA3;}
       <div class="tag">Documents</div>
       <div class="doc-row">
         <div>
-          <div class="name">Note de proposition — Matam</div><div class="pdf-embed"><iframe id="pdf-mat-1" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/proposition_adressage_matam.pdf#toolbar=0&navpanes=0" title="Note de proposition Matam"></iframe><a class="pdf-expand" onclick="pdfFullscreen('pdf-mat-1')">⤤ Agrandir</a></div>
+          <div class="name">Note de proposition — Matam</div><div class="pdf-embed" id="wrap-mat-1"><iframe id="pdf-mat-1" data-base="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/proposition_adressage_matam.pdf" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/proposition_adressage_matam.pdf#toolbar=0&navpanes=0" title="Note de proposition Matam"></iframe><div class="pdf-zoom"><button onclick="zoomPdf('pdf-mat-1',-1)">−</button><button onclick="zoomPdf('pdf-mat-1',1)">+</button></div><a class="pdf-expand" onclick="pdfFullscreen('wrap-mat-1')">⤤ Agrandir</a></div>
           <div class="sub">Phase d'extension, 13 sections + annexe</div>
         </div>
       </div>
       <div class="doc-row">
         <div>
-          <div class="name">Modèle de calcul — Matam</div><div class="pdf-embed"><iframe id="pdf-mat-2" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/budget_adressage_matam.pdf#toolbar=0&navpanes=0" title="Modèle de calcul Matam"></iframe><a class="pdf-expand" onclick="pdfFullscreen('pdf-mat-2')">⤤ Agrandir</a></div>
+          <div class="name">Modèle de calcul — Matam</div><div class="pdf-embed" id="wrap-mat-2"><iframe id="pdf-mat-2" data-base="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/budget_adressage_matam.pdf" src="https://macitaxsolutions-cyber.github.io/Meridien-Amenagement-Et-Ingenierie/documents/matam/budget_adressage_matam.pdf#toolbar=0&navpanes=0" title="Modèle de calcul Matam"></iframe><div class="pdf-zoom"><button onclick="zoomPdf('pdf-mat-2',-1)">−</button><button onclick="zoomPdf('pdf-mat-2',1)">+</button></div><a class="pdf-expand" onclick="pdfFullscreen('wrap-mat-2')">⤤ Agrandir</a></div>
           <div class="sub">Budget détaillé, hypothèses modifiables</div>
         </div>
       </div>
@@ -151,5 +151,5 @@ footer small{font-size:11px;color:#7C8DA3;}
   </div>
 </footer>
 
-<script>function pdfFullscreen(id){var el=document.getElementById(id);if(el.requestFullscreen){el.requestFullscreen();}else if(el.webkitRequestFullscreen){el.webkitRequestFullscreen();}}</script></body>
+<script>var pdfZoomLevels={};function zoomPdf(id,delta){var z=pdfZoomLevels[id]||100;z=Math.max(50,Math.min(300,z+delta*25));pdfZoomLevels[id]=z;var el=document.getElementById(id);var base=el.getAttribute('data-base');el.src='about:blank';setTimeout(function(){el.src=base+'#zoom='+z+'&toolbar=0&navpanes=0';},50);}function pdfFullscreen(id){var el=document.getElementById(id);if(el.requestFullscreen){el.requestFullscreen();}else if(el.webkitRequestFullscreen){el.webkitRequestFullscreen();}}</script></body>
 </html>
