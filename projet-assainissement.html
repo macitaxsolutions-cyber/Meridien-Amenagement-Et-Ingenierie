@@ -186,5 +186,5 @@ footer small{font-size:11px;color:#7C8DA3;}
 </div>
 </footer>
 
-<script>var pdfZoomLevels={};function zoomPdf(id,delta){var z=pdfZoomLevels[id]||100;z=Math.max(50,Math.min(300,z+delta*25));pdfZoomLevels[id]=z;var el=document.getElementById(id);var base=el.getAttribute('data-base');el.src=base+'#zoom='+z+'&toolbar=0&navpanes=0';}function pdfFullscreen(id){var el=document.getElementById(id);if(el.requestFullscreen){el.requestFullscreen();}else if(el.webkitRequestFullscreen){el.webkitRequestFullscreen();}}</script></body>
+<script>var pdfZoomLevels={};function zoomPdf(id,delta){var z=pdfZoomLevels[id]||100;z=Math.max(50,Math.min(300,z+delta*25));pdfZoomLevels[id]=z;var el=document.getElementById(id);var base=el.getAttribute('data-base');el.src='about:blank';setTimeout(function(){el.src=base+'#zoom='+z+'&toolbar=0&navpanes=0';},50);}function pdfFullscreen(id){var el=document.getElementById(id);if(el.requestFullscreen){el.requestFullscreen();}else if(el.webkitRequestFullscreen){el.webkitRequestFullscreen();}}</script></body>
 </html>
